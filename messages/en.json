@@ -1,0 +1,242 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "ideology": "Ideology",
+    "constitution": "Constitution",
+    "campaign": "Campaign",
+    "team": "Team",
+    "media": "Media",
+    "news": "News",
+    "events": "Events",
+    "join": "Join",
+    "volunteer": "Volunteer",
+    "contact": "Contact",
+    "donate": "Donate"
+  },
+  "common": {
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "name": "Full name",
+    "message": "Message",
+    "requiredNote": "Fields marked * are required",
+    "successTitle": "Thank you",
+    "errorTitle": "Something went wrong",
+    "tryAgain": "Please try again."
+  },
+  "footer": {
+    "tagline": "Nation First",
+    "quickLinks": "Quick Links",
+    "getInvolved": "Get Involved",
+    "contactUs": "Contact Us",
+    "rights": "Viro Ke Vir Indian Party. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "registered": "Registered political party · Regn. No 56/080/2022-23/ppsIV · PAN AAABV4915H"
+  },
+  "home": {
+    "heroEyebrow": "Registered Political Party · Est. 2023",
+    "heroTitle": "Nation First",
+    "heroSubtitle": "Viro Ke Vir Indian Party stands for honest, educated and dedicated leadership — building an India where every citizen lives with dignity, justice and self-reliance.",
+    "heroCtaPrimary": "Join the Party",
+    "heroCtaSecondary": "Read Our Ideology",
+    "motto": "Truth is troubled but cannot be defeated.",
+    "missionTitle": "Our Mission",
+    "missionBody": "Viro Ke Vir — ‘heroes of heroes’ — was founded to bring well-educated, honest and dedicated representatives into public life. We believe India's heroic heritage, its sages and its soldiers make it capable of true global leadership.",
+    "pillarsTitle": "What We Stand For",
+    "pillarsCta": "See our full ideology",
+    "newsTitle": "Latest News",
+    "newsEmpty": "News updates will appear here soon.",
+    "eventsTitle": "Upcoming Events",
+    "eventsEmpty": "No upcoming events right now — check back soon.",
+    "ctaTitle": "Stand With Us",
+    "ctaBody": "Whether you want to become a member, volunteer your time, or simply stay informed — there's a place for you in this movement.",
+    "ctaJoin": "Become a Member",
+    "ctaVolunteer": "Volunteer With Us"
+  },
+  "about": {
+    "title": "About VVIP",
+    "intro": "Viro Ke Vir Indian Party (VVIP) is a registered political party in India, officially registered on 14 February 2023.",
+    "foundingTitle": "Our Founding Story",
+    "foundingBody": [
+      "The party emerged from founder Laljibhai Bodar's experience supporting an independent candidate in the 2019 Lok Sabha elections in Varanasi. When that candidacy was rejected, Bodar felt compelled to build a political alternative from the ground up.",
+      "That conviction grew into a mission: to identify well-educated, non-corrupt and dedicated individuals across India who could serve in Parliament — not for power, but for the people."
+    ],
+    "nameTitle": "What ‘Viro Ke Vir’ Means",
+    "nameBody": "‘Viro Ke Vir’ translates to ‘heroes of heroes’, reflecting our vision of India as the land of heroes, sages and agriculture — a nation whose heritage deserves representatives worthy of it.",
+    "missionTitle": "Our Mission",
+    "missionBody": "We aim to build a parliament composed of well-educated, honest, devoted and dedicated individuals serving the nation. Drawing on Chanakya Niti, we believe educated and cultured citizens deserve respect — and that India's heroic heritage positions it to lead the world.",
+    "mottoTitle": "Our Motto",
+    "mottoBody": "“Truth is troubled but cannot be defeated.”"
+  },
+  "ideology": {
+    "title": "Our Ideology",
+    "intro": "Nation First — our foundational principle, emphasizing India's integrity, unity and cultural heritage above all else.",
+    "pillarsTitle": "Five Pillars",
+    "pillars": [
+      {
+        "title": "Nationalism & National Integration",
+        "body": "We view India as an eternal nation of agriculture and sages, united by culture rather than geography alone. We celebrate India's diversity as a defining strength, not a divide."
+      },
+      {
+        "title": "Democracy",
+        "body": "Drawing from Rigvedic principles — ‘truth is one, but scholars express it in different ways’ — we support pluralistic democratic values and inclusivity across every caste and community."
+      },
+      {
+        "title": "Ethics & Justice",
+        "body": "We commit to fighting injustice, exploitation and corruption, while setting new standards of accountability for collective welfare and societal well-being."
+      },
+      {
+        "title": "Universal Justice",
+        "body": "Inspired by Gandhian philosophy, we prioritize universal access to food, clothing, housing, education, employment and healthcare. Our vision is justice for all, without exception."
+      },
+      {
+        "title": "Values-Based Politics",
+        "body": "Ethics, loyalty, fearlessness, humility and faith guide us. We seek to restore moral values to public life and governance, one representative at a time."
+      }
+    ],
+    "slogansTitle": "Our Slogans",
+    "slogan1": "Jai Jawan Jai Kisan",
+    "slogan1Sub": "Honouring soldiers and farmers as India's protectors and providers",
+    "slogan2": "Vande Mataram",
+    "slogan2Sub": "A patriotic expression of devotion to Mother India"
+  },
+  "constitution": {
+    "title": "Party Constitution",
+    "intro": "As amended by the National Council, February 2022.",
+    "nameTitle": "Section 1 — Name",
+    "nameBody": "The organisation is called ‘Viro Ke Vir Indian Party’, abbreviated as VVIP.",
+    "objectiveTitle": "Section 2 — Objective",
+    "objectivePoints": [
+      "Building a modern, progressive and enlightened India that honours its ancient cultural heritage while establishing itself as an influential global power.",
+      "Establishing democratic governance rooted in political, social and economic justice, with equal opportunity across every demographic.",
+      "Ensuring freedom of religious belief and expression without discrimination of caste, creed, religion or gender.",
+      "Prioritising educated, nationally-dedicated candidates for public representation.",
+      "Maintaining true faith and allegiance to the Constitution of India, and upholding socialism, secularism and democracy."
+    ],
+    "downloadTitle": "Full Document",
+    "downloadBody": "The complete constitution is available at our office on request."
+  },
+  "campaign": {
+    "title": "Our Campaign",
+    "intro": "A campaign built on integrity — fielding candidates the nation can trust.",
+    "candidateQualityTitle": "Ex-Fauji Candidate Quality",
+    "candidateQualityIntro": "A significant share of our candidates are retired armed-forces veterans — Fauji — who have spent their lives serving the country and are ready to serve it again in Parliament.",
+    "candidateQualityPoints": [
+      "100% Educated",
+      "0% Criminal",
+      "0% Corrupt",
+      "101% Patriot"
+    ],
+    "galleryTitle": "From the Campaign Trail"
+  },
+  "team": {
+    "title": "Our Team",
+    "intro": "The people leading Viro Ke Vir Indian Party.",
+    "members": [
+      { "name": "Laljibhai Bodar", "role": "National President" },
+      { "name": "Ketan Parmar", "role": "General Secretary" },
+      { "name": "Sudhir Amreliya", "role": "Treasurer" }
+    ]
+  },
+  "media": {
+    "title": "Media",
+    "intro": "Coverage and moments from our print and electronic media presence.",
+    "printTab": "Print Media",
+    "electronicTab": "Electronic Media"
+  },
+  "news": {
+    "title": "Latest News",
+    "intro": "Updates, announcements and stories from across the party.",
+    "empty": "No news posts yet — check back soon.",
+    "backToNews": "Back to all news"
+  },
+  "events": {
+    "title": "Events",
+    "intro": "Society meetings, rallies and campaign events near you.",
+    "empty": "No upcoming events right now — check back soon.",
+    "dateLabel": "Date",
+    "locationLabel": "Location"
+  },
+  "join": {
+    "title": "Join the Party",
+    "intro": "Step forward to build a stronger, more transparent nation with VVIP.",
+    "nameLabel": "Full name *",
+    "phoneLabel": "Phone number *",
+    "constituencyLabel": "Assembly constituency *",
+    "motivationLabel": "Why do you want to join? *",
+    "volunteerLabel": "I would also like to volunteer",
+    "submit": "Join the Campaign",
+    "success": "Thank you for applying to join VVIP. Our team will be in touch soon.",
+    "error": "We couldn't submit your application. Please try again."
+  },
+  "volunteer": {
+    "title": "Get Involved",
+    "intro": "Volunteer your time and help build the movement in your community.",
+    "nameLabel": "Full name *",
+    "phoneLabel": "Phone number *",
+    "emailLabel": "Email",
+    "constituencyLabel": "Assembly constituency",
+    "helpTitle": "How can you help? *",
+    "helpOptions": {
+      "doorToDoor": "Door-to-door canvassing",
+      "phoneOutreach": "Phone call outreach",
+      "eventHosting": "Event hosting",
+      "eventAttendance": "Event attendance",
+      "other": "Other"
+    },
+    "messageLabel": "Anything else you'd like to share?",
+    "submit": "Sign Up to Volunteer",
+    "success": "Thank you for volunteering. We'll reach out with next steps.",
+    "error": "We couldn't submit your details. Please try again."
+  },
+  "donate": {
+    "title": "Support the Movement",
+    "intro": "Online donations are coming soon. Leave your details and our team will contact you directly about how to contribute.",
+    "comingSoonBadge": "Coming Soon",
+    "nameLabel": "Full name *",
+    "phoneLabel": "Phone number *",
+    "emailLabel": "Email",
+    "amountLabel": "Approximate amount you're considering",
+    "messageLabel": "Message",
+    "submit": "Register Interest",
+    "success": "Thank you — our team will contact you about contributing.",
+    "error": "We couldn't submit your details. Please try again.",
+    "alternativeTitle": "Prefer to reach us directly?",
+    "alternativeBody": "Call or email our office and we'll guide you through contributing to the party."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "Have a question or want to get in touch? Reach out below.",
+    "officeTitle": "Head Office",
+    "nameLabel": "Full name *",
+    "emailLabel": "Email *",
+    "phoneLabel": "Phone number",
+    "messageLabel": "Message *",
+    "submit": "Send Message",
+    "success": "Thank you for reaching out. We'll respond as soon as we can.",
+    "error": "We couldn't send your message. Please try again."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "This policy explains how Viro Ke Vir Indian Party collects and uses the information you share with us.",
+    "sections": [
+      {
+        "title": "Information We Collect",
+        "body": "When you submit a form on this site — to join, volunteer, donate or contact us — we collect the information you provide, such as your name, phone number, email address and message."
+      },
+      {
+        "title": "How We Use It",
+        "body": "We use this information solely to coordinate party activities, respond to your enquiries, and communicate with you about membership, volunteering or events. We do not sell your information to third parties."
+      },
+      {
+        "title": "Contact",
+        "body": "If you have questions about this policy or wish to have your information removed, contact us using the details on our Contact page."
+      }
+    ]
+  }
+}

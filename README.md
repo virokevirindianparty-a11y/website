@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Viro Ke Vir Indian Party — Website
 
-## Getting Started
+Next.js 16 (App Router) + Tailwind CSS v4 + Neon Postgres (Drizzle ORM), bilingual (English/Hindi via next-intl).
 
-First, run the development server:
+## Setup
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Create a Neon project at [neon.tech](https://neon.tech) and copy the connection string.
+3. Copy `.env.example` to `.env.local` and fill in:
+   - `DATABASE_URL` — the Neon connection string
+   - `AUTH_SECRET` — random secret for signing admin session cookies (`node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"`)
+   - `ADMIN_SEED_EMAIL` / `ADMIN_SEED_PASSWORD` — used once by the seed script to create the first admin login
+4. Push the schema to Neon and seed initial data:
+   ```bash
+   npm run db:push
+   npm run db:seed
+   ```
+5. Start the dev server:
+   ```bash
+   npm run dev
+   ```
+   Public site: [http://localhost:3000](http://localhost:3000) · Admin: [http://localhost:3000/admin/login](http://localhost:3000/admin/login)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/app/[locale]/` — public site (English default, Hindi at `/hi/...`)
+- `src/app/admin/` — admin dashboard (English-only, session-cookie protected)
+- `src/db/schema.ts` — Drizzle schema (admin users, news, events, form submissions)
+- `messages/en.json`, `messages/hi.json` — all site copy
+- `src/lib/actions/` — Server Actions for forms and admin CRUD
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts
 
-## Learn More
+- `npm run dev` / `npm run build` / `npm run start`
+- `npm run lint`
+- `npm run db:generate` — generate a new migration after editing `src/db/schema.ts`
+- `npm run db:push` — push schema to the database
+- `npm run db:studio` — browse the database
+- `npm run db:seed` — create the first admin user and sample content
 
-To learn more about Next.js, take a look at the following resources:
+## Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Hindi copy in `messages/hi.json` is a first-pass translation — have a native speaker review it before launch, given the political context.
+- `/donate` is a placeholder page with a "register interest" form — no payment gateway is wired in yet.
+- Real photos and the logo were sourced from the party's old WordPress site (`wp-content/uploads`), not this repo.
