@@ -36,7 +36,7 @@ export default async function AboutPage({
           </div>
         </div>
         <div className="relative h-72 md:h-full min-h-[280px] rounded-xl overflow-hidden shadow-sm">
-          <Image src="/images/about-team.jpg" alt="" fill className="object-cover" />
+          <Image src="/images/about-team.webp" alt="" fill className="object-cover" />
         </div>
       </section>
 

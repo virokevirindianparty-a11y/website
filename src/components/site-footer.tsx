@@ -26,7 +26,7 @@ export function SiteFooter() {
       <div className="container-page py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-2 mb-3">
-            <Image src="/images/logo.png" alt="VVIP" width={32} height={32} />
+            <Image src="/images/logo.webp" alt="VVIP" width={32} height={32} />
             <span className="font-heading font-extrabold">Viro Ke Vir Indian Party</span>
           </div>
           <p className="text-sm text-white/70">{t("footer.tagline")}</p>

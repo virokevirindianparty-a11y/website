@@ -27,7 +27,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur border-b border-border">
       <div className="container-page flex h-16 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <Image src="/images/logo.png" alt="VVIP" width={36} height={36} priority />
+          <Image src="/images/logo.webp" alt="VVIP" width={36} height={36} priority />
           <span className="font-heading font-extrabold text-navy text-lg leading-tight">
             Viro Ke Vir
             <span className="block text-xs font-semibold text-saffron-dark tracking-wide">

@@ -16,7 +16,7 @@ export default function AdminLoginPage() {
   return (
     <div className="w-full max-w-sm bg-surface rounded-xl shadow-lg p-8">
       <div className="flex flex-col items-center mb-6">
-        <Image src="/images/logo.png" alt="VVIP" width={48} height={48} />
+        <Image src="/images/logo.webp" alt="VVIP" width={48} height={48} />
         <h1 className="font-heading font-extrabold text-navy text-lg mt-3">VVIP Admin</h1>
       </div>
 

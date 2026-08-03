@@ -33,7 +33,7 @@ export default async function HomePage({
       <section className="relative overflow-hidden bg-navy text-white">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-rally.jpg"
+            src="/images/hero-rally.webp"
             alt=""
             fill
             priority
@@ -84,7 +84,7 @@ export default async function HomePage({
           </div>
           <div className="relative h-64 md:h-80 rounded-xl overflow-hidden shadow-sm">
             <Image
-              src="/images/about-team.jpg"
+              src="/images/about-team.webp"
               alt=""
               fill
               className="object-cover"

@@ -4,17 +4,17 @@ import { useState } from "react";
 import Image from "next/image";
 
 const PRINT_IMAGES = [
-  "/images/print-media-1.jpg",
-  "/images/print-media-2.jpg",
-  "/images/print-media-3.jpg",
-  "/images/print-media-4.jpg",
+  "/images/print-media-1.webp",
+  "/images/print-media-2.webp",
+  "/images/print-media-3.webp",
+  "/images/print-media-4.webp",
 ];
 
 const ELECTRONIC_IMAGES = [
-  "/images/electronic-media-1.jpg",
-  "/images/electronic-media-2.jpg",
-  "/images/electronic-media-3.jpg",
-  "/images/electronic-media-4.jpg",
+  "/images/electronic-media-1.webp",
+  "/images/electronic-media-2.webp",
+  "/images/electronic-media-3.webp",
+  "/images/electronic-media-4.webp",
 ];
 
 export function MediaTabs({

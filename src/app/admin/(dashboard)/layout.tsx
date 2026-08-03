@@ -27,7 +27,7 @@ export default async function AdminDashboardLayout({
       <body className="min-h-full flex bg-cream text-foreground">
         <aside className="hidden md:flex md:w-60 shrink-0 flex-col bg-navy text-white">
           <div className="flex items-center gap-2 px-5 py-5 border-b border-white/10">
-            <Image src="/images/logo.png" alt="VVIP" width={30} height={30} />
+            <Image src="/images/logo.webp" alt="VVIP" width={30} height={30} />
             <span className="font-heading font-bold text-sm">VVIP Admin</span>
           </div>
           <nav className="flex-1 py-4 px-3 space-y-1">

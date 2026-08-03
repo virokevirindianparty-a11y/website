@@ -7,15 +7,15 @@ import { PageHero } from "@/components/page-hero";
 export const dynamic = "force-static";
 
 const GALLERY = [
-  "/images/campaign-photo-1.jpg",
-  "/images/campaign-photo-2.jpg",
-  "/images/community-event.jpg",
+  "/images/campaign-photo-1.webp",
+  "/images/campaign-photo-2.webp",
+  "/images/community-event.webp",
 ];
 
 const POSTERS = [
-  "/images/campaign-mere-desh.png",
-  "/images/campaign-bharat-bhoomi.png",
-  "/images/campaign-hum-paida.png",
+  "/images/campaign-mere-desh.webp",
+  "/images/campaign-bharat-bhoomi.webp",
+  "/images/campaign-hum-paida.webp",
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -57,7 +57,7 @@ export default async function CampaignPage({
         </div>
         <div className="relative aspect-square rounded-xl overflow-hidden shadow-md">
           <Image
-            src="/images/campaign-candidate-quality.png"
+            src="/images/campaign-candidate-quality.webp"
             alt=""
             fill
             className="object-contain bg-black"
