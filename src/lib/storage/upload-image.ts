@@ -11,19 +11,21 @@ const WEBP_QUALITY = 80;
 export class MediaUploadError extends Error {}
 
 /**
- * Uploads a File to Netlify Blobs, downsizing and converting it to WebP
- * first so the site stays fast, and returns the URL to serve it from.
+ * Downsizes and converts an uploaded image to WebP, then stores it in
+ * Netlify Blobs. Returns the URL to serve it from.
  */
-export async function uploadImage(file: File): Promise<string> {
-  if (!ALLOWED_TYPES.has(file.type)) {
+export async function uploadImage(data: ArrayBuffer, contentType: string): Promise<string> {
+  if (!ALLOWED_TYPES.has(contentType)) {
     throw new MediaUploadError("Only JPEG, PNG, WEBP or GIF images are allowed.");
   }
-  if (file.size > MAX_SIZE_BYTES) {
+  if (data.byteLength === 0) {
+    throw new MediaUploadError("The uploaded file is empty.");
+  }
+  if (data.byteLength > MAX_SIZE_BYTES) {
     throw new MediaUploadError("Image must be smaller than 5MB.");
   }
 
-  const original = Buffer.from(await file.arrayBuffer());
-  const webp = await sharp(original, { animated: true })
+  const webp = await sharp(Buffer.from(data), { animated: true })
     .resize({ width: MAX_WIDTH, withoutEnlargement: true })
     .webp({ quality: WEBP_QUALITY })
     .toBuffer();
