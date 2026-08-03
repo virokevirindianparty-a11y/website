@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import { SubmitButton } from "@/components/form/submit-button";
+import { ImageUploadField } from "@/components/form/image-upload-field";
 import { initialFormState, type FormState } from "@/lib/actions/types";
 import type { EventRow } from "@/lib/data/events";
 
@@ -81,12 +82,7 @@ export function EventForm({
           <input name="location" required defaultValue={event?.location} className={inputClass} />
         </div>
       </div>
-      <div>
-        <label className="block text-sm font-semibold text-navy mb-1.5">
-          Cover image URL (optional)
-        </label>
-        <input name="coverImage" defaultValue={event?.coverImage ?? ""} className={inputClass} />
-      </div>
+      <ImageUploadField currentImage={event?.coverImage} />
       <SubmitButton>{event ? "Save Changes" : "Create Event"}</SubmitButton>
     </form>
   );

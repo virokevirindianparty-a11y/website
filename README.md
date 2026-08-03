@@ -13,6 +13,7 @@ Next.js 16 (App Router) + Tailwind CSS v4 + Neon Postgres (Drizzle ORM), bilingu
    - `DATABASE_URL` — the Neon connection string
    - `AUTH_SECRET` — random secret for signing admin session cookies (`node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"`)
    - `ADMIN_SEED_EMAIL` / `ADMIN_SEED_PASSWORD` — used once by the seed script to create the first admin login
+   - `NETLIFY_SITE_ID` / `NETLIFY_API_TOKEN` — needed for admin image uploads to work locally (see comments in `.env.example` for where to find these). Also add both to the site's environment variables in the Netlify dashboard for production.
 4. Push the schema to Neon and seed initial data:
    ```bash
    npm run db:push

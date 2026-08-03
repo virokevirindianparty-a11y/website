@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import { SubmitButton } from "@/components/form/submit-button";
+import { ImageUploadField } from "@/components/form/image-upload-field";
 import { initialFormState, type FormState } from "@/lib/actions/types";
 import type { NewsPost } from "@/lib/data/news";
 
@@ -53,12 +54,7 @@ export function NewsForm({
           <textarea name="bodyHi" required rows={6} defaultValue={post?.bodyHi} className={inputClass} />
         </div>
       </div>
-      <div>
-        <label className="block text-sm font-semibold text-navy mb-1.5">
-          Cover image URL (optional, e.g. /images/hero-rally.jpg)
-        </label>
-        <input name="coverImage" defaultValue={post?.coverImage ?? ""} className={inputClass} />
-      </div>
+      <ImageUploadField currentImage={post?.coverImage} />
       <label className="flex items-center gap-2.5 text-sm text-muted">
         <input
           type="checkbox"
