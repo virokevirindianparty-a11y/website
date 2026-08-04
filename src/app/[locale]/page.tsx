@@ -37,9 +37,9 @@ export default async function HomePage({
             alt=""
             fill
             priority
-            className="object-cover opacity-30"
+            className="object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/35 to-navy/10" />
         </div>
         <div className="container-page relative py-20 md:py-32">
           <p className="text-saffron font-semibold text-xs md:text-sm tracking-widest uppercase mb-4">

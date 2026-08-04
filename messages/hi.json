@@ -36,7 +36,8 @@
     "contactUs": "संपर्क करें",
     "rights": "वीरो के वीर इंडियन पार्टी। सर्वाधिकार सुरक्षित।",
     "privacyPolicy": "गोपनीयता नीति",
-    "registered": "पंजीकृत राजनीतिक दल · पंजीकरण संख्या 56/080/2022-23/ppsIV · PAN AAABV4915H"
+    "registered": "पंजीकृत राजनीतिक दल · पंजीकरण संख्या 56/080/2022-23/ppsIV · PAN AAABV4915H",
+    "developedBy": "द्वारा विकसित और प्रबंधित"
   },
   "home": {
     "heroEyebrow": "पंजीकृत राजनीतिक दल · स्थापना 2023",
@@ -203,6 +204,11 @@
     "emailLabel": "ईमेल",
     "amountLabel": "आप लगभग कितनी राशि सोच रहे हैं",
     "messageLabel": "संदेश",
+    "namePlaceholder": "आपका पूरा नाम",
+    "phonePlaceholder": "+91 XXXXX XXXXX",
+    "emailPlaceholder": "you@example.com",
+    "amountPlaceholder": "उदा. ₹1,000 या ₹5,000+",
+    "messagePlaceholder": "आप हमें कुछ और बताना चाहेंगे तो यहाँ लिखें",
     "submit": "रुचि दर्ज करें",
     "success": "धन्यवाद — हमारी टीम योगदान के बारे में आपसे संपर्क करेगी।",
     "error": "हम आपका विवरण सबमिट नहीं कर सके। कृपया पुनः प्रयास करें।",

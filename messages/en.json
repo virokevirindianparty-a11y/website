@@ -36,7 +36,8 @@
     "contactUs": "Contact Us",
     "rights": "Viro Ke Vir Indian Party. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
-    "registered": "Registered political party · Regn. No 56/080/2022-23/ppsIV · PAN AAABV4915H"
+    "registered": "Registered political party · Regn. No 56/080/2022-23/ppsIV · PAN AAABV4915H",
+    "developedBy": "Developed and managed by"
   },
   "home": {
     "heroEyebrow": "Registered Political Party · Est. 2023",
@@ -203,6 +204,11 @@
     "emailLabel": "Email",
     "amountLabel": "Approximate amount you're considering",
     "messageLabel": "Message",
+    "namePlaceholder": "Your full name",
+    "phonePlaceholder": "+91 XXXXX XXXXX",
+    "emailPlaceholder": "you@example.com",
+    "amountPlaceholder": "e.g. ₹1,000 or ₹5,000+",
+    "messagePlaceholder": "Anything you'd like us to know",
     "submit": "Register Interest",
     "success": "Thank you — our team will contact you about contributing.",
     "error": "We couldn't submit your details. Please try again.",

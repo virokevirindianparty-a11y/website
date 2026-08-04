@@ -97,6 +97,19 @@ export function SiteFooter() {
           <p>© {new Date().getFullYear()} {t("footer.rights")}</p>
           <p>{t("footer.registered")}</p>
         </div>
+        <div className="container-page pb-5 text-center text-xs text-white/50">
+          <p>
+            {t("footer.developedBy")}{" "}
+            <a
+              href="https://tirthukumar-porfolio.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-saffron hover:underline"
+            >
+              Tirthkumar Bodar
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
