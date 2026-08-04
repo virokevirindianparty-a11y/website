@@ -1,10 +1,8 @@
 "use client";
 
-import { useActionState } from "react";
 import { useTranslations } from "next-intl";
-import { submitJoin } from "@/lib/actions/join";
-import { initialFormState } from "@/lib/actions/types";
-import { SubmitButton } from "@/components/form/submit-button";
+import { usePostForm } from "@/lib/hooks/use-post-form";
+import { PendingButton } from "@/components/form/pending-button";
 import { FormNotice } from "@/components/form/form-notice";
 
 const inputClass =
@@ -12,10 +10,10 @@ const inputClass =
 
 export function JoinForm() {
   const t = useTranslations("join");
-  const [state, formAction] = useActionState(submitJoin, initialFormState);
+  const { state, pending, handleSubmit } = usePostForm("/api/join");
 
   return (
-    <form action={formAction} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <FormNotice status={state.status} successMessage={t("success")} errorMessage={t("error")} />
       <div>
         <label className="block text-sm font-semibold text-navy mb-1.5">
@@ -41,13 +39,13 @@ export function JoinForm() {
         <label className="block text-sm font-semibold text-navy mb-1.5">
           {t("motivationLabel")}
         </label>
-        <textarea name="motivation" required rows={4} maxLength={4000} className={inputClass} />
+        <textarea name="motivation" rows={4} maxLength={4000} className={inputClass} />
       </div>
       <label className="flex items-center gap-2.5 text-sm text-muted">
         <input type="checkbox" name="wantsToVolunteer" className="rounded border-border" />
         {t("volunteerLabel")}
       </label>
-      <SubmitButton>{t("submit")}</SubmitButton>
+      <PendingButton pending={pending}>{t("submit")}</PendingButton>
     </form>
   );
 }

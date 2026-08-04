@@ -1,10 +1,8 @@
 "use client";
 
-import { useActionState } from "react";
 import { useTranslations } from "next-intl";
-import { submitDonateInterest } from "@/lib/actions/donate";
-import { initialFormState } from "@/lib/actions/types";
-import { SubmitButton } from "@/components/form/submit-button";
+import { usePostForm } from "@/lib/hooks/use-post-form";
+import { PendingButton } from "@/components/form/pending-button";
 import { FormNotice } from "@/components/form/form-notice";
 
 const inputClass =
@@ -12,10 +10,10 @@ const inputClass =
 
 export function DonateForm() {
   const t = useTranslations("donate");
-  const [state, formAction] = useActionState(submitDonateInterest, initialFormState);
+  const { state, pending, handleSubmit } = usePostForm("/api/donate");
 
   return (
-    <form action={formAction} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <FormNotice status={state.status} successMessage={t("success")} errorMessage={t("error")} />
       <div className="grid sm:grid-cols-2 gap-5">
         <div>
@@ -51,7 +49,7 @@ export function DonateForm() {
         </label>
         <textarea name="message" rows={3} maxLength={4000} className={inputClass} />
       </div>
-      <SubmitButton>{t("submit")}</SubmitButton>
+      <PendingButton pending={pending}>{t("submit")}</PendingButton>
     </form>
   );
 }

@@ -62,14 +62,14 @@ export default async function SubmissionsPage() {
           Join Applications ({join.length})
         </h2>
         <Table
-          columns={["Date", "Name", "Phone", "Constituency", "Volunteer?", "Motivation"]}
+          columns={["Date", "Name", "Phone", "City/Village", "Volunteer?", "Motivation"]}
           rows={join.map((r) => ({
             Date: new Date(r.createdAt).toLocaleString(),
             Name: r.name,
             Phone: r.phone,
-            Constituency: r.constituency,
+            "City/Village": r.constituency,
             "Volunteer?": r.wantsToVolunteer ? "Yes" : "No",
-            Motivation: r.motivation,
+            Motivation: r.motivation || "—",
           }))}
         />
       </section>
@@ -79,13 +79,13 @@ export default async function SubmissionsPage() {
           Volunteers ({volunteer.length})
         </h2>
         <Table
-          columns={["Date", "Name", "Phone", "Email", "Constituency", "Help types", "Message"]}
+          columns={["Date", "Name", "Phone", "Email", "City/Village", "Help types", "Message"]}
           rows={volunteer.map((r) => ({
             Date: new Date(r.createdAt).toLocaleString(),
             Name: r.name,
             Phone: r.phone,
             Email: r.email ?? "—",
-            Constituency: r.constituency ?? "—",
+            "City/Village": r.constituency ?? "—",
             "Help types": r.helpTypes.join(", "),
             Message: r.message ?? "—",
           }))}

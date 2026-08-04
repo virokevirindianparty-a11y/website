@@ -1,10 +1,8 @@
 "use client";
 
-import { useActionState } from "react";
 import { useTranslations } from "next-intl";
-import { submitContact } from "@/lib/actions/contact";
-import { initialFormState } from "@/lib/actions/types";
-import { SubmitButton } from "@/components/form/submit-button";
+import { usePostForm } from "@/lib/hooks/use-post-form";
+import { PendingButton } from "@/components/form/pending-button";
 import { FormNotice } from "@/components/form/form-notice";
 
 const inputClass =
@@ -12,10 +10,10 @@ const inputClass =
 
 export function ContactForm() {
   const t = useTranslations("contact");
-  const [state, formAction] = useActionState(submitContact, initialFormState);
+  const { state, pending, handleSubmit } = usePostForm("/api/contact");
 
   return (
-    <form action={formAction} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <FormNotice status={state.status} successMessage={t("success")} errorMessage={t("error")} />
       <div>
         <label className="block text-sm font-semibold text-navy mb-1.5">
@@ -43,7 +41,7 @@ export function ContactForm() {
         </label>
         <textarea name="message" required rows={5} maxLength={4000} className={inputClass} />
       </div>
-      <SubmitButton>{t("submit")}</SubmitButton>
+      <PendingButton pending={pending}>{t("submit")}</PendingButton>
     </form>
   );
 }

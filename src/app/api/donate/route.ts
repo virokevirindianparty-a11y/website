@@ -1,9 +1,7 @@
-"use server";
-
+import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getDb } from "@/db";
 import { donationInterest } from "@/db/schema";
-import { initialFormState, type FormState } from "./types";
 
 const schema = z.object({
   name: z.string().trim().min(1).max(255),
@@ -13,10 +11,8 @@ const schema = z.object({
   message: z.string().trim().max(4000).optional().or(z.literal("")),
 });
 
-export async function submitDonateInterest(
-  _prevState: FormState,
-  formData: FormData,
-): Promise<FormState> {
+export async function POST(request: Request) {
+  const formData = await request.formData();
   const parsed = schema.safeParse({
     name: formData.get("name"),
     phone: formData.get("phone"),
@@ -26,7 +22,7 @@ export async function submitDonateInterest(
   });
 
   if (!parsed.success) {
-    return { status: "error", message: "invalid" };
+    return NextResponse.json({ status: "error", message: "invalid" });
   }
 
   try {
@@ -37,10 +33,8 @@ export async function submitDonateInterest(
       amountRange: parsed.data.amountRange || null,
       message: parsed.data.message || null,
     });
-    return { status: "success" };
+    return NextResponse.json({ status: "success" });
   } catch {
-    return { status: "error", message: "server" };
+    return NextResponse.json({ status: "error", message: "server" });
   }
 }
-
-export const donateInitialState = initialFormState;

@@ -1,9 +1,7 @@
-"use server";
-
+import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getDb } from "@/db";
 import { contactSubmissions } from "@/db/schema";
-import { initialFormState, type FormState } from "./types";
 
 const schema = z.object({
   name: z.string().trim().min(1).max(255),
@@ -12,10 +10,12 @@ const schema = z.object({
   message: z.string().trim().min(1).max(4000),
 });
 
-export async function submitContact(
-  _prevState: FormState,
-  formData: FormData,
-): Promise<FormState> {
+// Plain fetch() POST, not a Server Action <form action>: Netlify's Next.js
+// Runtime crashes handling Server Action form submissions on this deployment
+// (see /api/admin/upload for the fuller explanation). Route Handlers use the
+// standard Fetch Request object and don't hit that code path.
+export async function POST(request: Request) {
+  const formData = await request.formData();
   const parsed = schema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
@@ -24,7 +24,7 @@ export async function submitContact(
   });
 
   if (!parsed.success) {
-    return { status: "error", message: "invalid" };
+    return NextResponse.json({ status: "error", message: "invalid" });
   }
 
   try {
@@ -34,10 +34,8 @@ export async function submitContact(
       phone: parsed.data.phone || null,
       message: parsed.data.message,
     });
-    return { status: "success" };
+    return NextResponse.json({ status: "success" });
   } catch {
-    return { status: "error", message: "server" };
+    return NextResponse.json({ status: "error", message: "server" });
   }
 }
-
-export const contactInitialState = initialFormState;
