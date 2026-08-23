@@ -25,7 +25,7 @@ export function HeroSlideshow() {
           alt=""
           fill
           priority={i === 0}
-          className={`object-cover object-top transition-opacity duration-1000 ease-in-out ${
+          className={`object-contain transition-opacity duration-1000 ease-in-out ${
             i === index ? "opacity-60" : "opacity-0"
           }`}
         />
