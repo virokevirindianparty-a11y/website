@@ -1,6 +1,15 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight, Users, Scale, Landmark, HeartHandshake, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  Users,
+  Scale,
+  Landmark,
+  HeartHandshake,
+  ShieldCheck,
+  CheckCircle2,
+  Phone,
+} from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { HeroSlideshow } from "@/components/hero-slideshow";
 import { listPublishedNews } from "@/lib/data/news";
@@ -28,6 +37,14 @@ export default async function HomePage({
   ]);
 
   const pillars = tIdeology.raw("pillars") as Array<{ title: string; body: string }>;
+  const visionPoints = t.raw("visionPoints") as string[];
+  const visionTags = t.raw("visionTags") as string[];
+  const visionImage = locale === "hi" ? "/images/vision-hi.webp" : "/images/vision-en.webp";
+
+  const election2027Contacts = [
+    { name: "Laljibhai Bodar", role: t("election2027President"), phone: "9737536789" },
+    { name: "Himmatbhai Ladumor", role: t("election2027StateHead"), phone: "9979942421" },
+  ];
 
   return (
     <>
@@ -64,6 +81,121 @@ export default async function HomePage({
           <p className="mt-10 font-heading text-lg md:text-xl italic text-saffron/90 max-w-xl">
             &ldquo;{t("motto")}&rdquo;
           </p>
+        </div>
+      </section>
+
+      <section className="container-page py-16 md:py-24">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="relative aspect-[3/4] max-w-sm mx-auto md:mx-0 rounded-xl overflow-hidden shadow-md border border-border">
+            <Image src="/images/payment.webp" alt="" fill className="object-contain bg-white" />
+          </div>
+          <div>
+            <h2 className="font-heading font-extrabold text-2xl md:text-3xl text-navy mb-4">
+              {t("paymentTitle")}
+            </h2>
+            <p className="text-muted leading-relaxed mb-6">{t("paymentIntro")}</p>
+            <div className="bg-cream border border-border rounded-xl p-5 mb-6">
+              <h3 className="font-heading font-bold text-sm text-navy uppercase tracking-wide mb-3">
+                {t("paymentDetailsTitle")}
+              </h3>
+              <dl className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+                {[
+                  [t("paymentUpi"), "7984964164m@pnb"],
+                  [t("paymentAccountName"), "Viro Ke Vir Indian Party"],
+                  [t("paymentBank"), "Punjab National Bank"],
+                  [t("paymentAccountNumber"), "0024002100029910"],
+                  [t("paymentIfsc"), "PUNB0002400"],
+                  [t("paymentSwift"), "PUNBINBBBNR"],
+                  [t("paymentMobile"), "7984964164"],
+                ].map(([label, value]) => (
+                  <div key={label}>
+                    <dt className="text-xs font-semibold text-muted">{label}</dt>
+                    <dd className="text-navy font-semibold break-all">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+            <Link
+              href="/donate"
+              className="inline-flex items-center gap-2 bg-saffron text-white font-heading font-semibold px-6 py-3 rounded-full shadow-sm hover:bg-saffron-dark transition-colors"
+            >
+              {t("paymentCta")}
+              <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-navy text-white py-16 md:py-24">
+        <div className="container-page grid md:grid-cols-2 gap-10 items-center">
+          <div className="order-2 md:order-1">
+            <h2 className="font-heading font-extrabold text-2xl md:text-3xl mb-4">
+              {t("visionTitle")}
+            </h2>
+            <p className="text-white/80 leading-relaxed mb-6">{t("visionIntro")}</p>
+            <ul className="space-y-3 mb-6">
+              {visionPoints.map((point) => (
+                <li key={point} className="flex gap-3 text-sm text-white/80 leading-relaxed">
+                  <CheckCircle2 size={18} className="text-saffron shrink-0 mt-0.5" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {visionTags.map((tag) => (
+                <span
+                  key={tag}
+                  className="bg-white/10 border border-white/20 rounded-full px-3.5 py-1.5 text-xs font-semibold"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <p className="font-heading font-bold text-saffron">{t("visionTagline")}</p>
+          </div>
+          <div className="order-1 md:order-2 relative aspect-[3/4] max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg">
+            <Image src={visionImage} alt="" fill className="object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <section className="container-page py-16 md:py-24">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto md:mx-0">
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-md">
+              <Image src="/images/election-2027.webp" alt="" fill className="object-cover" />
+            </div>
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-md">
+              <Image src="/images/election-2027-mission.webp" alt="" fill className="object-cover" />
+            </div>
+          </div>
+          <div>
+            <h2 className="font-heading font-extrabold text-2xl md:text-3xl text-navy mb-4">
+              {t("election2027Title")}
+            </h2>
+            <p className="font-heading italic text-saffron-deep leading-relaxed mb-4">
+              {t("election2027Intro")}
+            </p>
+            <p className="text-muted leading-relaxed mb-6">{t("election2027Body")}</p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {election2027Contacts.map((contact) => (
+                <div
+                  key={contact.name}
+                  className="bg-cream border border-border rounded-xl p-4"
+                >
+                  <p className="font-heading font-bold text-navy">{contact.name}</p>
+                  <p className="text-xs text-muted mb-2">{contact.role}</p>
+                  <a
+                    href={`tel:+91${contact.phone}`}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-saffron-deep hover:underline"
+                  >
+                    <Phone size={14} />
+                    {contact.phone}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

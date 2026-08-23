@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Phone, Mail } from "lucide-react";
@@ -19,6 +20,17 @@ export default async function DonatePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("donate");
+  const tHome = await getTranslations("home");
+
+  const bankFields = [
+    [tHome("paymentUpi"), "7984964164m@pnb"],
+    [tHome("paymentAccountName"), "Viro Ke Vir Indian Party"],
+    [tHome("paymentBank"), "Punjab National Bank"],
+    [tHome("paymentAccountNumber"), "0024002100029910"],
+    [tHome("paymentIfsc"), "PUNB0002400"],
+    [tHome("paymentSwift"), "PUNBINBBBNR"],
+    [tHome("paymentMobile"), "7984964164"],
+  ];
 
   return (
     <>
@@ -27,8 +39,19 @@ export default async function DonatePage({
       <section className="container-page py-14 md:py-20 grid md:grid-cols-5 gap-12">
         <div className="md:col-span-2">
           <span className="inline-block bg-saffron/15 text-saffron-deep text-xs font-semibold uppercase tracking-wide px-3 py-1.5 rounded-full mb-4">
-            {t("comingSoonBadge")}
+            {t("bankDetailsBadge")}
           </span>
+          <div className="relative aspect-[3/4] max-w-xs rounded-xl overflow-hidden shadow-md border border-border mb-6">
+            <Image src="/images/payment.webp" alt="" fill className="object-contain bg-white" />
+          </div>
+          <dl className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm mb-6">
+            {bankFields.map(([label, value]) => (
+              <div key={label}>
+                <dt className="text-xs font-semibold text-muted">{label}</dt>
+                <dd className="text-navy font-semibold break-all">{value}</dd>
+              </div>
+            ))}
+          </dl>
           <h2 className="font-heading font-bold text-lg text-navy mb-2">
             {t("alternativeTitle")}
           </h2>
