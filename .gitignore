@@ -37,6 +37,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw asset drops awaiting processing (see scripts/organize-*.mjs) - not for direct commit
+public/images/*.mp4
+public/images/*.mov
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

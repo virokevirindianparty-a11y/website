@@ -153,7 +153,7 @@ export default async function HomePage({
             </div>
             <p className="font-heading font-bold text-saffron">{t("visionTagline")}</p>
           </div>
-          <div className="order-1 md:order-2 relative aspect-[3/4] max-w-md mx-auto rounded-xl overflow-hidden shadow-lg bg-white">
+          <div className="order-1 md:order-2 relative aspect-[3/4] max-w-md mx-auto md:mx-0 rounded-xl overflow-hidden shadow-lg bg-white">
             <Image src={visionImage} alt="" fill className="object-contain" />
           </div>
         </div>
