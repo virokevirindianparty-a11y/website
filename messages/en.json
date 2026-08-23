@@ -104,7 +104,10 @@
     "slogan1": "Jai Jawan Jai Kisan",
     "slogan1Sub": "Honouring soldiers and farmers as India's protectors and providers",
     "slogan2": "Vande Mataram",
-    "slogan2Sub": "A patriotic expression of devotion to Mother India"
+    "slogan2Sub": "A patriotic expression of devotion to Mother India",
+    "bookTitle": "Our Journey, Step by Step",
+    "bookIntro": "Flip through to learn about VVIP's story, symbol and mission.",
+    "bookPageLabel": "Page {current} of {total}"
   },
   "constitution": {
     "title": "Party Constitution",
@@ -148,7 +151,8 @@
     "title": "Media",
     "intro": "Coverage and moments from our print and electronic media presence.",
     "printTab": "Print Media",
-    "electronicTab": "Electronic Media"
+    "electronicTab": "Electronic Media",
+    "legalTab": "Legal Documents"
   },
   "news": {
     "title": "Latest News",

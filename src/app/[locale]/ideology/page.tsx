@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { Landmark, Scale, ShieldCheck, HeartHandshake, Users } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
+import { IdeologyBook } from "@/components/ideology-book";
 
 export const dynamic = "force-static";
 
@@ -46,6 +47,16 @@ export default async function IdeologyPage({
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="bg-cream border-y border-border py-14 md:py-20">
+        <div className="container-page text-center">
+          <h2 className="font-heading font-extrabold text-2xl text-navy mb-2">
+            {t("bookTitle")}
+          </h2>
+          <p className="text-muted mb-8">{t("bookIntro")}</p>
+          <IdeologyBook />
         </div>
       </section>
 

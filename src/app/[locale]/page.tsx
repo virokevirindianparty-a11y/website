@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, Users, Scale, Landmark, HeartHandshake, ShieldCheck } from "lucide-react";
 import { Link } from "@/i18n/navigation";
+import { HeroSlideshow } from "@/components/hero-slideshow";
 import { listPublishedNews } from "@/lib/data/news";
 import { listUpcomingEvents } from "@/lib/data/events";
 
@@ -32,13 +33,7 @@ export default async function HomePage({
     <>
       <section className="relative overflow-hidden bg-navy text-white">
         <div className="absolute inset-0">
-          <Image
-            src="/images/hero-rally.webp"
-            alt=""
-            fill
-            priority
-            className="object-cover opacity-60"
-          />
+          <HeroSlideshow />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/35 to-navy/10" />
         </div>
         <div className="container-page relative py-20 md:py-32">

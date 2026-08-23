@@ -23,7 +23,11 @@ export default async function MediaPage({
     <>
       <PageHero eyebrow="VVIP" title={t("title")} subtitle={t("intro")} />
       <section className="container-page py-14 md:py-20">
-        <MediaTabs printLabel={t("printTab")} electronicLabel={t("electronicTab")} />
+        <MediaTabs
+          printLabel={t("printTab")}
+          electronicLabel={t("electronicTab")}
+          legalLabel={t("legalTab")}
+        />
       </section>
     </>
   );
