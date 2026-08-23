@@ -27,6 +27,16 @@ export default async function IdeologyPage({
     <>
       <PageHero eyebrow="VVIP" title={t("title")} subtitle={t("intro")} />
 
+      <section className="bg-cream border-b border-border py-14 md:py-20">
+        <div className="container-page text-center">
+          <h2 className="font-heading font-extrabold text-2xl text-navy mb-2">
+            {t("bookTitle")}
+          </h2>
+          <p className="text-muted mb-8">{t("bookIntro")}</p>
+          <IdeologyBook />
+        </div>
+      </section>
+
       <section className="container-page py-14 md:py-20">
         <h2 className="font-heading font-extrabold text-2xl text-navy mb-8">
           {t("pillarsTitle")}
@@ -47,16 +57,6 @@ export default async function IdeologyPage({
               </div>
             );
           })}
-        </div>
-      </section>
-
-      <section className="bg-cream border-y border-border py-14 md:py-20">
-        <div className="container-page text-center">
-          <h2 className="font-heading font-extrabold text-2xl text-navy mb-2">
-            {t("bookTitle")}
-          </h2>
-          <p className="text-muted mb-8">{t("bookIntro")}</p>
-          <IdeologyBook />
         </div>
       </section>
 
