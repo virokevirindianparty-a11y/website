@@ -36,7 +36,7 @@ export default async function HomePage({
           <HeroSlideshow />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/35 to-navy/10" />
         </div>
-        <div className="container-page relative py-20 md:py-32">
+        <div className="container-page relative py-10 sm:py-20 md:py-32">
           <p className="text-saffron font-semibold text-xs md:text-sm tracking-widest uppercase mb-4">
             {t("heroEyebrow")}
           </p>
