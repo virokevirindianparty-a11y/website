@@ -86,7 +86,7 @@ export default async function HomePage({
 
       <section className="container-page py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="relative aspect-[3/4] max-w-sm mx-auto md:mx-0 rounded-xl overflow-hidden shadow-md border border-border">
+          <div className="relative aspect-[3/4] max-w-md mx-auto md:mx-0 rounded-xl overflow-hidden shadow-md border border-border">
             <Image src="/images/payment.webp" alt="" fill className="object-contain bg-white" />
           </div>
           <div>
@@ -153,21 +153,16 @@ export default async function HomePage({
             </div>
             <p className="font-heading font-bold text-saffron">{t("visionTagline")}</p>
           </div>
-          <div className="order-1 md:order-2 relative aspect-[3/4] max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg">
-            <Image src={visionImage} alt="" fill className="object-cover" />
+          <div className="order-1 md:order-2 relative aspect-[3/4] max-w-md mx-auto rounded-xl overflow-hidden shadow-lg bg-white">
+            <Image src={visionImage} alt="" fill className="object-contain" />
           </div>
         </div>
       </section>
 
       <section className="container-page py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto md:mx-0">
-            <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/election-2027.webp" alt="" fill className="object-cover" />
-            </div>
-            <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-md">
-              <Image src="/images/election-2027-mission.webp" alt="" fill className="object-cover" />
-            </div>
+          <div className="relative aspect-[3/4] max-w-md mx-auto md:mx-0 rounded-xl overflow-hidden shadow-md bg-white">
+            <Image src="/images/election-2027.webp" alt="" fill className="object-contain" />
           </div>
           <div>
             <h2 className="font-heading font-extrabold text-2xl md:text-3xl text-navy mb-4">
