@@ -86,7 +86,7 @@ export default async function HomePage({
 
       <section className="container-page py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="relative aspect-[3/4] max-w-md mx-auto md:mx-0 rounded-xl overflow-hidden shadow-md border border-border">
+          <div className="relative aspect-[3/4] w-full max-w-md mx-auto rounded-xl overflow-hidden shadow-md border border-border">
             <Image src="/images/payment.webp" alt="" fill className="object-contain bg-white" />
           </div>
           <div>
@@ -153,7 +153,7 @@ export default async function HomePage({
             </div>
             <p className="font-heading font-bold text-saffron">{t("visionTagline")}</p>
           </div>
-          <div className="order-1 md:order-2 relative aspect-[3/4] max-w-md mx-auto md:mx-0 rounded-xl overflow-hidden shadow-lg bg-white">
+          <div className="order-1 md:order-2 relative aspect-[3/4] w-full max-w-md mx-auto rounded-xl overflow-hidden shadow-lg bg-white">
             <Image src={visionImage} alt="" fill className="object-contain" />
           </div>
         </div>
@@ -161,7 +161,7 @@ export default async function HomePage({
 
       <section className="container-page py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="relative aspect-[3/4] max-w-md mx-auto md:mx-0 rounded-xl overflow-hidden shadow-md bg-white">
+          <div className="relative aspect-[3/4] w-full max-w-md mx-auto rounded-xl overflow-hidden shadow-md bg-white">
             <Image src="/images/election-2027.webp" alt="" fill className="object-contain" />
           </div>
           <div>
