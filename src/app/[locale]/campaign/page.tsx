@@ -3,20 +3,9 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import { CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
+import { CampaignGallery } from "./campaign-gallery";
 
 export const dynamic = "force-static";
-
-const GALLERY = [
-  "/images/campaign-photo-1.webp",
-  "/images/campaign-photo-2.webp",
-  "/images/community-event.webp",
-];
-
-const POSTERS = [
-  "/images/campaign-mere-desh.webp",
-  "/images/campaign-bharat-bhoomi.webp",
-  "/images/campaign-hum-paida.webp",
-];
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("campaign");
@@ -70,23 +59,7 @@ export default async function CampaignPage({
           <h2 className="font-heading font-extrabold text-2xl text-navy mb-8">
             {t("galleryTitle")}
           </h2>
-          <div className="grid sm:grid-cols-3 gap-5 mb-5">
-            {GALLERY.map((src) => (
-              <div key={src} className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-                <Image src={src} alt="" fill className="object-cover" />
-              </div>
-            ))}
-          </div>
-          <div className="grid sm:grid-cols-3 gap-5">
-            {POSTERS.map((src) => (
-              <div
-                key={src}
-                className="relative aspect-square rounded-xl overflow-hidden shadow-sm bg-white"
-              >
-                <Image src={src} alt="" fill className="object-contain" />
-              </div>
-            ))}
-          </div>
+          <CampaignGallery />
         </div>
       </section>
     </>

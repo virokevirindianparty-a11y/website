@@ -27,6 +27,7 @@ export default async function MediaPage({
           printLabel={t("printTab")}
           electronicLabel={t("electronicTab")}
           legalLabel={t("legalTab")}
+          election2024Label={t("election2024Tab")}
         />
       </section>
     </>

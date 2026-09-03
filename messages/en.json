@@ -5,6 +5,7 @@
     "ideology": "Ideology",
     "constitution": "Constitution",
     "campaign": "Campaign",
+    "election2024": "Election 2024",
     "team": "Team",
     "media": "Media",
     "news": "News",
@@ -187,13 +188,23 @@
     ],
     "galleryTitle": "From the Campaign Trail"
   },
+  "election2024": {
+    "title": "Election 2024 Candidates",
+    "intro": "VVIP fielded candidates across Punjab, Uttar Pradesh, Bihar, Gujarat, Delhi, Maharashtra, Uttarakhand, Jammu & Kashmir and Tripura in the 2024 Lok Sabha elections — the great majority of them retired armed-forces veterans.",
+    "constituencyLabel": "Constituency",
+    "numberLabel": "No.",
+    "candidateCount": "{count} candidates",
+    "mynetaNote": "Tap a candidate to search their public affidavit details (criminal, financial, education) on MyNeta.info, the Election Commission data archive run by the Association for Democratic Reforms.",
+    "mynetaLink": "View on MyNeta"
+  },
   "team": {
     "title": "Our Team",
     "intro": "The people leading Viro Ke Vir Indian Party.",
     "members": [
-      { "name": "Laljibhai Bodar", "role": "National President" },
-      { "name": "Ketan Parmar", "role": "General Secretary" },
-      { "name": "Nayanaben Bodar", "role": "Treasurer" }
+      { "name": "Laljibhai Bodar", "role": "National President", "photo": "1" },
+      { "name": "Ketan Parmar", "role": "General Secretary", "photo": "2" },
+      { "name": "Nayanaben Bodar", "role": "Treasurer", "photo": "3" },
+      { "name": "Himmatbhai Ladumor", "role": "Gujarat State President", "photo": "4" }
     ]
   },
   "media": {
@@ -201,7 +212,8 @@
     "intro": "Coverage and moments from our print and electronic media presence.",
     "printTab": "Print Media",
     "electronicTab": "Electronic Media",
-    "legalTab": "Legal Documents"
+    "legalTab": "Legal Documents",
+    "election2024Tab": "Election 2024"
   },
   "news": {
     "title": "Latest News",

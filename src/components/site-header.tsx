@@ -11,6 +11,7 @@ const NAV_LINKS: Array<{ href: string; key: string }> = [
   { href: "/about", key: "about" },
   { href: "/ideology", key: "ideology" },
   { href: "/campaign", key: "campaign" },
+  { href: "/election-2024", key: "election2024" },
   { href: "/team", key: "team" },
   { href: "/media", key: "media" },
   { href: "/news", key: "news" },
