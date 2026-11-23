@@ -1,21 +1,28 @@
-import { Montserrat, Inter, Noto_Sans_Devanagari } from "next/font/google";
+import localFont from "next/font/local";
 
-export const montserrat = Montserrat({
+// Self-hosted variable fonts (from @fontsource-variable, OFL-licensed - see
+// src/fonts/). Using next/font/google made every build download font files
+// from Google, which intermittently failed on Netlify's build servers.
+
+export const montserrat = localFont({
+  src: "../fonts/montserrat-latin-wght-normal.woff2",
   variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: "100 900",
+  display: "swap",
 });
 
-export const inter = Inter({
+export const inter = localFont({
+  src: "../fonts/inter-latin-wght-normal.woff2",
   variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: "100 900",
+  display: "swap",
 });
 
-export const notoDevanagari = Noto_Sans_Devanagari({
+export const notoDevanagari = localFont({
+  src: "../fonts/noto-sans-devanagari-devanagari-wght-normal.woff2",
   variable: "--font-noto-devanagari",
-  subsets: ["devanagari"],
-  weight: ["400", "500", "600", "700"],
+  weight: "100 900",
+  display: "swap",
 });
 
 export const fontVariables = `${montserrat.variable} ${inter.variable} ${notoDevanagari.variable}`;
