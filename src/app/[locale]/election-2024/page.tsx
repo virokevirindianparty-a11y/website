@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ExternalLink } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { CANDIDATES } from "@/lib/data/candidates";
+import { ManifestoGallery } from "./manifesto-gallery";
 
 export const dynamic = "force-static";
 
@@ -74,6 +75,21 @@ export default async function Election2024Page({
               </div>
             </a>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-cream border-t border-border">
+        <div className="container-page py-14 md:py-20">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <h2 className="font-heading font-bold text-2xl md:text-3xl text-navy">{t("manifestoTitle")}</h2>
+            <p className="text-muted mt-3">{t("manifestoIntro")}</p>
+          </div>
+          <ManifestoGallery
+            pages={[
+              { src: "/images/manifesto-2024/hi.webp", label: t("manifestoHi") },
+              { src: "/images/manifesto-2024/gu.webp", label: t("manifestoGu") },
+            ]}
+          />
         </div>
       </section>
     </>
